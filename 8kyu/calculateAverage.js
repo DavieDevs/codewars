@@ -22,7 +22,7 @@ Create a function that takes all given numbers and returns the average of those 
 function average(arr) {
   let sum = arr.reduce((acc, curr) => acc + curr, 0);
 
-  return sum / arr.length;
+  return sum === 0 ? 0 : sum / arr.length;
 }
 
 console.log(average([1, 1, 1]));
@@ -33,3 +33,9 @@ function sum(arr) {
 }
 
 console.log(sum([1, 9]));
+
+// another solution:
+const alternateAverage = (arr) =>
+  arr.length === 0 ? 0 : arr.reduce((acc, curr) => acc + curr, 0) / arr.length;
+
+console.log(alternateAverage([1, 9]));
