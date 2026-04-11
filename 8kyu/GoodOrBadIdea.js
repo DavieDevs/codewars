@@ -19,14 +19,14 @@ const example2 = ["bad", "bad", "bad"];
 const example3 = ["bad", "bad", "bad", "good"];
 
 const well = (arr) => {
-  const result = arr.reduce((acc, curr) => acc + (curr === "good" ? 1 : 0), 0);
+  `  const result = arr.reduce((acc, curr) => acc + (curr === "good" ? 1 : 0), 0);
   if (result > 2) {
     return "I smell a series!";
   } else if (result >= 1) {
     return "Publish!";
   } else {
     return "Fail!";
-  }
+  }`;
 };
 console.log(well(example1));
 console.log(well(example2));
